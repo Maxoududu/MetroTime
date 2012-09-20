@@ -42,11 +42,11 @@
         if(timeLeft != nil)timeLeft = [timeLeft substringFromIndex:3];
         
         NSLog(@"\n dir : %@ timeleft : %@",direction,timeLeft);
-        if (direction != NULL) horaire.direction = direction;
-        if (direction != NULL) horaire.line = line;
-        if (horaire != NULL) horaire.timeLeft = timeLeft;
+        horaire.direction = direction;
+        horaire.line = line;
+        horaire.timeLeft = timeLeft;
         
-        [listeHoraires addObject:horaire];
+        if (timeLeft != nil)[listeHoraires addObject:horaire];
         
         direction = nil;
         timeLeft = nil;
@@ -73,7 +73,6 @@
         url = [datastored substringFromIndex:lineName.length+1];
         
         [listAlltime addObjectsFromArray:[self readRATPTime:[NSURL URLWithString:url] :lineName]];
-
         
         compteur--;
         
