@@ -1,21 +1,18 @@
 //
-//  HorairesTableViewController.m
+//  SettingsTableViewController.m
 //  MetroTime
 //
-//  Created by Maxime Dupuy on 18/09/12.
+//  Created by Maxime Dupuy on 19/09/12.
 //  Copyright (c) 2012 Maxime Dupuy. All rights reserved.
 //
 
-#import "HorairesTableViewController.h"
-#import "RatpTimeStealer.h"
-#import "horaire.h"
+#import "SettingsTableViewController.h"
 
-@interface HorairesTableViewController ()
+@interface SettingsTableViewController ()
 
 @end
 
-@implementation HorairesTableViewController
-
+@implementation SettingsTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,38 +25,11 @@
 
 - (void)viewDidLoad
 {
-    
     NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
-    NSMutableArray *listLine = [[NSMutableArray alloc] initWithCapacity:0];
-    
-    
-    // Create default preference if none
-    if ([pref objectForKey:@"listLine"]== nil) {
-        
-        NSString *line=@"Olympiade Ligne 14";
-        NSString *url=@"http://wap.ratp.fr/siv/schedule?service=next&reseau=metro&referer=station&lineid=M14&directionsens=A&stationname=oly&submitAction=Valider";
-        NSString *separator =@"§";
-        
-        NSString *data = [line stringByAppendingString:[separator stringByAppendingString:url]];
-        NSLog(@"String par défault %@",data);
-        
-        [listLine addObject:data];
-        
-        //saving the default line 
-        [[NSUserDefaults standardUserDefaults] setObject:listLine forKey:@"listLine"];
-        NSLog(@"List par défault générer");
-    }
-        
-    //on récupère la liste des ligne enregistré 
-
-    listLine = [NSMutableArray arrayWithArray:[pref objectForKey:@"listLine"]];
-    
-    self.listeHoraires = [RatpTimeStealer getAllTimes:listLine];
-    
+    self.listLine = [[NSMutableArray alloc] init];
+    self.listLine = [pref objectForKey:@"listLine"];
+    NSLog(@"prefArrayTable  %@",self.listLine);
     [super viewDidLoad];
-    
-
-    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -91,28 +61,31 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.listeHoraires.count;
-
+    return self.listLine.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"Cell2";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
-
+    
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        
-    Horaire *h = [self.listeHoraires objectAtIndex:indexPath.row];
-        
-    cell.textLabel.text = [h.line stringByAppendingString:h.direction];
-    cell.detailTextLabel.text = h.timeLeft;
+    
+    NSString *datastored = [self.listLine objectAtIndex:indexPath.row];
+    NSScanner *aScanner = [NSScanner scannerWithString:datastored];
+    NSString *lineName;
+    NSString *url;
+    [aScanner scanUpToString:@"§" intoString:&lineName];
+    url = [datastored substringFromIndex:lineName.length+1];
+    
+    cell.textLabel.text = lineName;
+    cell.detailTextLabel.text = url;
+
     
     return cell;
 }
-
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -166,12 +139,4 @@
      */
 }
 
-
-- (IBAction)refresh:(id)sender {
-     NSLog(@"Refresh pressed");
-    
-    
-    [self.tableView reloadData];
-    
-}
 @end
