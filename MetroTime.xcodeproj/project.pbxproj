@@ -14,12 +14,15 @@
 		11C6B1A31608E2F800667970 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B1A21608E2F800667970 /* main.m */; };
 		11C6B1A71608E2F800667970 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B1A61608E2F800667970 /* AppDelegate.m */; };
 		11C6B1AA1608E2F800667970 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C6B1A81608E2F800667970 /* MainStoryboard.storyboard */; };
-		11C6B1AD1608E2F800667970 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B1AC1608E2F800667970 /* FirstViewController.m */; };
 		11C6B1AF1608E2F800667970 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C6B1AE1608E2F800667970 /* first.png */; };
 		11C6B1B11608E2F800667970 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C6B1B01608E2F800667970 /* first@2x.png */; };
-		11C6B1B41608E2F800667970 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B1B31608E2F800667970 /* SecondViewController.m */; };
 		11C6B1B61608E2F800667970 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C6B1B51608E2F800667970 /* second.png */; };
 		11C6B1B81608E2F800667970 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C6B1B71608E2F800667970 /* second@2x.png */; };
+		11C6B1C21608E3F700667970 /* HorairesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B1C11608E3F700667970 /* HorairesTableViewController.m */; };
+		11C6B1C51608E43C00667970 /* Horaire.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B1C41608E43C00667970 /* Horaire.m */; };
+		11C6B1C91609042700667970 /* RatpTimeStealer.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B1C81609042700667970 /* RatpTimeStealer.m */; };
+		11C6B1CF1609AF2200667970 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B1CE1609AF2200667970 /* SettingsViewController.m */; };
+		11C6B1D21609B89400667970 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B1D11609B89400667970 /* SettingsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,14 +37,20 @@
 		11C6B1A51608E2F800667970 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		11C6B1A61608E2F800667970 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		11C6B1A91608E2F800667970 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		11C6B1AB1608E2F800667970 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		11C6B1AC1608E2F800667970 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		11C6B1AE1608E2F800667970 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		11C6B1B01608E2F800667970 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		11C6B1B21608E2F800667970 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		11C6B1B31608E2F800667970 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		11C6B1B51608E2F800667970 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		11C6B1B71608E2F800667970 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		11C6B1C01608E3F700667970 /* HorairesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorairesTableViewController.h; path = ../HorairesTableViewController.h; sourceTree = "<group>"; };
+		11C6B1C11608E3F700667970 /* HorairesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HorairesTableViewController.m; path = ../HorairesTableViewController.m; sourceTree = "<group>"; };
+		11C6B1C31608E43C00667970 /* Horaire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Horaire.h; sourceTree = "<group>"; };
+		11C6B1C41608E43C00667970 /* Horaire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Horaire.m; sourceTree = "<group>"; };
+		11C6B1C71609042700667970 /* RatpTimeStealer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatpTimeStealer.h; sourceTree = "<group>"; };
+		11C6B1C81609042700667970 /* RatpTimeStealer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatpTimeStealer.m; sourceTree = "<group>"; };
+		11C6B1CD1609AF2200667970 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		11C6B1CE1609AF2200667970 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		11C6B1D01609B89400667970 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		11C6B1D11609B89400667970 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,17 +97,12 @@
 		11C6B19C1608E2F800667970 /* MetroTime */ = {
 			isa = PBXGroup;
 			children = (
+				11C6B1C61608F6C900667970 /* Model */,
 				11C6B1A51608E2F800667970 /* AppDelegate.h */,
 				11C6B1A61608E2F800667970 /* AppDelegate.m */,
 				11C6B1A81608E2F800667970 /* MainStoryboard.storyboard */,
-				11C6B1AB1608E2F800667970 /* FirstViewController.h */,
-				11C6B1AC1608E2F800667970 /* FirstViewController.m */,
-				11C6B1AE1608E2F800667970 /* first.png */,
-				11C6B1B01608E2F800667970 /* first@2x.png */,
-				11C6B1B21608E2F800667970 /* SecondViewController.h */,
-				11C6B1B31608E2F800667970 /* SecondViewController.m */,
-				11C6B1B51608E2F800667970 /* second.png */,
-				11C6B1B71608E2F800667970 /* second@2x.png */,
+				11C6B1BF1608E32600667970 /* ViewController */,
+				11C6B1BE1608E30F00667970 /* Ressource */,
 				11C6B19D1608E2F800667970 /* Supporting Files */,
 			);
 			path = MetroTime;
@@ -113,6 +117,41 @@
 				11C6B1A41608E2F800667970 /* MetroTime-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11C6B1BE1608E30F00667970 /* Ressource */ = {
+			isa = PBXGroup;
+			children = (
+				11C6B1AE1608E2F800667970 /* first.png */,
+				11C6B1B01608E2F800667970 /* first@2x.png */,
+				11C6B1B51608E2F800667970 /* second.png */,
+				11C6B1B71608E2F800667970 /* second@2x.png */,
+			);
+			name = Ressource;
+			sourceTree = "<group>";
+		};
+		11C6B1BF1608E32600667970 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				11C6B1C01608E3F700667970 /* HorairesTableViewController.h */,
+				11C6B1C11608E3F700667970 /* HorairesTableViewController.m */,
+				11C6B1D01609B89400667970 /* SettingsTableViewController.h */,
+				11C6B1D11609B89400667970 /* SettingsTableViewController.m */,
+				11C6B1CD1609AF2200667970 /* SettingsViewController.h */,
+				11C6B1CE1609AF2200667970 /* SettingsViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		11C6B1C61608F6C900667970 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11C6B1C71609042700667970 /* RatpTimeStealer.h */,
+				11C6B1C81609042700667970 /* RatpTimeStealer.m */,
+				11C6B1C31608E43C00667970 /* Horaire.h */,
+				11C6B1C41608E43C00667970 /* Horaire.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,8 +223,11 @@
 			files = (
 				11C6B1A31608E2F800667970 /* main.m in Sources */,
 				11C6B1A71608E2F800667970 /* AppDelegate.m in Sources */,
-				11C6B1AD1608E2F800667970 /* FirstViewController.m in Sources */,
-				11C6B1B41608E2F800667970 /* SecondViewController.m in Sources */,
+				11C6B1C21608E3F700667970 /* HorairesTableViewController.m in Sources */,
+				11C6B1C51608E43C00667970 /* Horaire.m in Sources */,
+				11C6B1C91609042700667970 /* RatpTimeStealer.m in Sources */,
+				11C6B1CF1609AF2200667970 /* SettingsViewController.m in Sources */,
+				11C6B1D21609B89400667970 /* SettingsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
