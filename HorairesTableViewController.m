@@ -17,6 +17,38 @@
 @implementation HorairesTableViewController
 
 
+- (void)getData
+{
+    
+    NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *listLine = [[NSMutableArray alloc] initWithCapacity:0];
+    
+    // Create default preference if none
+    if ([pref objectForKey:@"listLine"]== nil) {
+        
+        NSString *line=@"Olympiade M14";
+        NSString *url=@"http://wap.ratp.fr/siv/schedule?service=next&reseau=metro&referer=station&lineid=M14&directionsens=A&stationname=oly&submitAction=Valider";
+        NSString *separator =@"§";
+        
+        NSString *data = [line stringByAppendingString:[separator stringByAppendingString:url]];
+        NSLog(@"String par défault %@",data);
+        
+        [listLine addObject:data];
+        
+        //saving the default line
+        [[NSUserDefaults standardUserDefaults] setObject:listLine forKey:@"listLine"];
+        NSLog(@"List par défault générer");
+    }
+    
+    //on récupère la liste des ligne enregistré
+    
+    listLine = [NSMutableArray arrayWithArray:[pref objectForKey:@"listLine"]];
+    
+    self.listeHoraires = [RatpTimeStealer getAllTimes:listLine];
+
+}
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -29,37 +61,8 @@
 - (void)viewDidLoad
 {
     
-    NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
-    NSMutableArray *listLine = [[NSMutableArray alloc] initWithCapacity:0];
-    
-    
-    // Create default preference if none
-    if ([pref objectForKey:@"listLine"]== nil) {
-        
-        NSString *line=@"Olympiade Ligne 14";
-        NSString *url=@"http://wap.ratp.fr/siv/schedule?service=next&reseau=metro&referer=station&lineid=M14&directionsens=A&stationname=oly&submitAction=Valider";
-        NSString *separator =@"§";
-        
-        NSString *data = [line stringByAppendingString:[separator stringByAppendingString:url]];
-        NSLog(@"String par défault %@",data);
-        
-        [listLine addObject:data];
-        
-        //saving the default line 
-        [[NSUserDefaults standardUserDefaults] setObject:listLine forKey:@"listLine"];
-        NSLog(@"List par défault générer");
-    }
-        
-    //on récupère la liste des ligne enregistré 
-
-    listLine = [NSMutableArray arrayWithArray:[pref objectForKey:@"listLine"]];
-    
-    self.listeHoraires = [RatpTimeStealer getAllTimes:listLine];
-    
+    //[self getData];
     [super viewDidLoad];
-    
-
-    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -71,6 +74,7 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    self.listeHoraires = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -96,20 +100,19 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+{      
     
-    // Configure the cell...
-
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"horaireCell"];
     Horaire *h = [self.listeHoraires objectAtIndex:indexPath.row];
-        
-    cell.textLabel.text = [h.line stringByAppendingString:h.direction];
-    cell.detailTextLabel.text = h.timeLeft;
     
+	UILabel *nameLineLabel = (UILabel *)[cell viewWithTag:1];
+	nameLineLabel.text = h.line;
+    UILabel *dirLabel = (UILabel *)[cell viewWithTag:2];
+	dirLabel.text = h.direction;
+	UILabel *timeLabel = (UILabel *)[cell viewWithTag:3];
+	timeLabel.text = h.timeLeft;
     return cell;
+
 }
 
 
@@ -165,13 +168,15 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
-
+- (void) viewDidAppear:(BOOL)animated{
+    [self getData];
+    [self.tableView reloadData];
+    NSLog(@"HoraireTableviewAppear");
+}
 
 - (IBAction)refresh:(id)sender {
      NSLog(@"Refresh pressed");
-    
-    
+    [self getData];
     [self.tableView reloadData];
-    
 }
 @end

@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSMutableArray *listeHoraires;
 
+- (void)getData;
 - (IBAction)refresh:(id)sender;
 
 @end

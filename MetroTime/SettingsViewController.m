@@ -63,13 +63,13 @@
     // Save Values
     [preferences setObject:self.listeLinePref forKey:@"listLine"];
     [preferences synchronize];
-    
-    
-    
+    NSLog(@"adding prefs");
+    [self dismissModalViewControllerAnimated:true];
 }
 
 - (IBAction)cancel:(id)sender {
-
+    [self dismissModalViewControllerAnimated:true];
 }
+
 
 @end

@@ -13,6 +13,13 @@
 @end
 
 @implementation SettingsTableViewController
+- (void) getData
+{
+    NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
+    self.listLine = [[NSMutableArray alloc] init];
+    self.listLine = [pref objectForKey:@"listLine"];
+    NSLog(@"prefArrayTable  %@",self.listLine);
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -25,10 +32,7 @@
 
 - (void)viewDidLoad
 {
-    NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
-    self.listLine = [[NSMutableArray alloc] init];
-    self.listLine = [pref objectForKey:@"listLine"];
-    NSLog(@"prefArrayTable  %@",self.listLine);
+    //[self getData];
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -138,5 +142,23 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+- (void) viewDidAppear:(BOOL)animated{
+    self.listLine = nil;
+    [self getData];
+    [self.tableView reloadData];
+    NSLog(@"SettingTableviewAppear");
+}
+
+- (IBAction)DeleteAll:(id)sender {
+    
+    
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"listLine"];
+    NSLog(@"Pref Wiped");
+    
+    self.listLine = nil;
+    [self.tableView reloadData];
+
+}
+
 
 @end

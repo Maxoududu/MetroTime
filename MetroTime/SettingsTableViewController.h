@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsTableViewController : UITableViewController
+@interface SettingsTableViewController : UITableViewController 
 
 @property (strong, nonatomic)NSMutableArray *listLine;
+- (void)getData;
+- (IBAction)DeleteAll:(id)sender;
 
 @end
