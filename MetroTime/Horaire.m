@@ -8,6 +8,8 @@
 
 #import "Horaire.h"
 
+//custom object with 3 strings
+
 @implementation Horaire
 
 @synthesize line;

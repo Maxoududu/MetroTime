@@ -10,9 +10,10 @@
 
 @interface Horaire : NSObject
 
+//custom object with 3 strings
+
 @property (nonatomic, strong) NSString *line;
 @property (nonatomic, strong) NSString *direction;
 @property (nonatomic, strong) NSString *timeLeft;
-
 
 @end
