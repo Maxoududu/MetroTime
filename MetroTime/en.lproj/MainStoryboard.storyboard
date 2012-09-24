@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Horaires Table View Controller - Horaires-->
         <scene sceneID="BL9-as-hvo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OEy-6F-Pxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="qG5-m9-KDz" customClass="HorairesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OsN-Vp-aAv">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
@@ -66,15 +65,151 @@
                             <outlet property="delegate" destination="qG5-m9-KDz" id="rnG-Oh-U4J"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" tag="1" title="Horaires" image="first" id="hJS-XX-FhC"/>
+                    <tabBarItem key="tabBarItem" title="Horaires" image="11-clock.png" id="hJS-XX-FhC"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OEy-6F-Pxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="795" y="-364"/>
+            <point key="canvasLocation" x="787" y="-487"/>
+        </scene>
+        <!--Table View Controller - Plans-->
+        <scene sceneID="lzJ-se-GIO">
+            <objects>
+                <tableViewController id="LWK-N5-9DY" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="F5r-Ww-H5b">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="U0j-H1-nYq">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="UoX-wn-C4w" style="IBUITableViewCellStyleDefault" id="EaM-fI-4gt">
+                                        <rect key="frame" x="0.0" y="10" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Plan Métro,Tram, RER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UoX-wn-C4w">
+                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="BaG-Ji-z2D" kind="push" id="ktS-J4-Ken"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="bcT-4j-5xw" style="IBUITableViewCellStyleDefault" id="U1b-eG-jJh">
+                                        <rect key="frame" x="0.0" y="55" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Plan Bus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bcT-4j-5xw">
+                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="fnw-U4-815" kind="push" id="B54-cA-16A"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Plans" id="wW3-Yf-OP7"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Do4-iQ-Srv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1308" y="240"/>
+        </scene>
+        <!--Plan Metro View Controller - Plan Métro Tram RER-->
+        <scene sceneID="o0r-mL-H4g">
+            <objects>
+                <viewController id="BaG-Ji-z2D" customClass="PlanMetroViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7iP-Ec-4NQ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="chf-ih-oIY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BaG-Ji-z2D" id="OyX-Dz-ixh"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Plan Métro Tram RER" id="smk-mo-VC7"/>
+                    <connections>
+                        <outlet property="scrollView" destination="chf-ih-oIY" id="rxK-ce-jmj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rLy-aP-012" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1898" y="-115"/>
+        </scene>
+        <!--Plan Bus View Controller - Plan Bus-->
+        <scene sceneID="0lP-aV-EBg">
+            <objects>
+                <viewController id="fnw-U4-815" customClass="PlanBusViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O6P-VF-e0b">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Vc7-Da-sds">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fnw-U4-815" id="i3l-qM-sK2"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Plan Bus" id="Bfz-lX-TZe"/>
+                    <connections>
+                        <outlet property="scrollView" destination="Vc7-Da-sds" id="Sz6-Lf-YiX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49a-nY-u0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1898" y="533"/>
+        </scene>
+        <!--Navigation Controller - Plans-->
+        <scene sceneID="7B5-mP-H9E">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="YHR-He-1dj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Plans" image="103-map.png" id="bwu-5z-8Im"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="MwH-tp-UGN">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LWK-N5-9DY" kind="relationship" relationship="rootViewController" id="5du-Fg-bcZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xw8-SQ-z7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="240"/>
         </scene>
         <!--Settings Table View Controller - Réglages-->
         <scene sceneID="4ON-3g-5U2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BhH-Qn-FKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="pYB-HA-xVU" customClass="SettingsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="U3H-L5-bHw">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
@@ -100,7 +235,7 @@
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="EkX-69-TR8">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingCell" id="EkX-69-TR8">
                                 <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -111,9 +246,9 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <tabBarItem key="tabBarItem" tag="2" title="Réglages" image="second.png" id="pSI-xf-X09"/>
+                    <tabBarItem key="tabBarItem" title="Réglages" image="19-gear.png" id="pSI-xf-X09"/>
                     <navigationItem key="navigationItem" title="Réglages" id="vS5-8E-ae6">
-                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="trash" id="kHJ-2b-lyT">
+                        <barButtonItem key="leftBarButtonItem" title="delete" id="kHJ-2b-lyT">
                             <color key="tintColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="DeleteAll:" destination="pYB-HA-xVU" id="BYP-P5-nqP"/>
@@ -122,13 +257,13 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pnt-ac-dMZ"/>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhH-Qn-FKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="795" y="578"/>
+            <point key="canvasLocation" x="787" y="1014"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="iqW-t8-lje">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tys-dr-fcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="uWV-9y-O2i" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tOO-mi-s2m">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
@@ -181,13 +316,13 @@
                         <outlet property="urlTF" destination="Chh-Wl-naI" id="cuq-mg-82U"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tys-dr-fcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1345" y="578"/>
+            <point key="canvasLocation" x="1308" y="1014"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
                 <tabBarController id="4" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
@@ -196,23 +331,38 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="qG5-m9-KDz" kind="relationship" relationship="viewControllers" id="zci-Rk-N7l"/>
-                        <segue destination="pYB-HA-xVU" kind="relationship" relationship="viewControllers" id="JIC-rJ-gZV"/>
+                        <segue destination="qG5-m9-KDz" kind="relationship" relationship="viewControllers" id="rJ9-ad-qj2"/>
+                        <segue destination="YHR-He-1dj" kind="relationship" relationship="viewControllers" id="c5A-Uc-xlv"/>
+                        <segue destination="pYB-HA-xVU" kind="relationship" relationship="viewControllers" id="K7f-xg-SFI"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256" y="63"/>
+            <point key="canvasLocation" x="86" y="240"/>
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="16" height="16"/>
-        <image name="second.png" width="30" height="30"/>
+        <image name="103-map.png" width="26" height="21"/>
+        <image name="11-clock.png" width="25" height="25"/>
+        <image name="19-gear.png" width="26" height="26"/>
     </resources>
     <classes>
         <class className="HorairesTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HorairesTableViewController.h"/>
             <relationships>
                 <relationship kind="action" name="refresh:"/>
+            </relationships>
+        </class>
+        <class className="PlanBusViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlanBusViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="PlanMetroViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlanMetroViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
             </relationships>
         </class>
         <class className="SettingsTableViewController" superclassName="UITableViewController">
