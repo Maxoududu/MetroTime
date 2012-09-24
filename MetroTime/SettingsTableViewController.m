@@ -15,6 +15,7 @@
 @implementation SettingsTableViewController
 - (void) getData
 {
+    //reading the data stored into Prefs
     NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
     self.listLine = [[NSMutableArray alloc] init];
     self.listLine = [pref objectForKey:@"listLine"];
@@ -32,7 +33,6 @@
 
 - (void)viewDidLoad
 {
-    //[self getData];
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -73,7 +73,7 @@
     static NSString *CellIdentifier = @"Cell2";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
+    // Configuring the  custom cell.
     
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     
@@ -142,6 +142,8 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
+//reload data when appear
 - (void) viewDidAppear:(BOOL)animated{
     self.listLine = nil;
     [self getData];
@@ -149,9 +151,8 @@
     NSLog(@"SettingTableviewAppear");
 }
 
+// action for the delete button (saving a empty Array into Prefs)
 - (IBAction)DeleteAll:(id)sender {
-    
-    
     [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"listLine"];
     NSLog(@"Pref Wiped");
     

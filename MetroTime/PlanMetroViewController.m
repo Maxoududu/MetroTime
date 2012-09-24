@@ -2,7 +2,7 @@
 //  PlanMetroViewController.m
 //  MetroTime
 //
-//  Created by Maxime Dupuy on 24/09/12.
+//  Created by Pierrick PICON on 24/09/12.
 //  Copyright (c) 2012 Maxime Dupuy. All rights reserved.
 //
 
@@ -19,6 +19,7 @@
 @synthesize imageView = _imageView;
 @synthesize scrollView = _scrollView;
 
+// method witch resize and center the image
 - (void)centerScrollViewContents{
     CGSize boundsSize = self.scrollView.bounds.size;
     CGRect contentsFrame = self.imageView.frame;
@@ -42,11 +43,12 @@
     
 }
 
+// Add the scrollView into the view
 -(UIView*)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return self.imageView;
 }
 
-
+// call the centerScrollViewContents when 
 -(void)scrollViewDidZoom:(UIScrollView *)scrollView {
     [self centerScrollViewContents];
 }
@@ -54,6 +56,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //loading the image
 	UIImage *image =[UIImage imageNamed:@"PlanMetro.png"];
     self.imageView =[[UIImageView alloc] initWithImage:image];
     self.imageView.frame = (CGRect){.origin=CGPointMake(0.0f, 0.0f), .size=image.size};
@@ -63,6 +66,8 @@
     
     
 }
+
+// custom implementation to save zooming state
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     

@@ -44,6 +44,7 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+// action for the save button
 - (IBAction)save:(id)sender {
     NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
     
@@ -67,6 +68,7 @@
     [self dismissModalViewControllerAnimated:true];
 }
 
+// action for the cancel button
 - (IBAction)cancel:(id)sender {
     [self dismissModalViewControllerAnimated:true];
 }

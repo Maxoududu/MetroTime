@@ -16,18 +16,19 @@
 
 @implementation HorairesTableViewController
 
-
+// private method to get line stored into the Prefs data
 - (void)getData
 {
     
     NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
     NSMutableArray *listLine = [[NSMutableArray alloc] initWithCapacity:0];
     
-    // Create default preference if none
+    // Create default preferences if none exist (Olympiade line 14)
     if ([pref objectForKey:@"listLine"]== nil) {
         
         NSString *line=@"Olympiade M14";
         NSString *url=@"http://wap.ratp.fr/siv/schedule?service=next&reseau=metro&referer=station&lineid=M14&directionsens=A&stationname=oly&submitAction=Valider";
+        // we use a separator because custom object can't be saved into NSUserDefaults
         NSString *separator =@"§";
         
         NSString *data = [line stringByAppendingString:[separator stringByAppendingString:url]];
@@ -40,7 +41,7 @@
         NSLog(@"List par défault générer");
     }
     
-    //on récupère la liste des ligne enregistré
+    //Reading the preferences file which contain lines informations (name & URL)
     
     listLine = [NSMutableArray arrayWithArray:[pref objectForKey:@"listLine"]];
     
@@ -101,7 +102,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {      
-    
+    // creating the custom cell 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"horaireCell"];
     Horaire *h = [self.listeHoraires objectAtIndex:indexPath.row];
     
@@ -168,12 +169,14 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+// refresh the view (calling the model) when appear
 - (void) viewDidAppear:(BOOL)animated{
     [self getData];
     [self.tableView reloadData];
     NSLog(@"HoraireTableviewAppear");
 }
 
+// action for the refresh button
 - (IBAction)refresh:(id)sender {
      NSLog(@"Refresh pressed");
     [self getData];
