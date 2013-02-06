@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1111F07416105F76005EFBB2 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 1111F07116105F76005EFBB2 /* 19-gear.png */; };
+		1111F07516105F76005EFBB2 /* 11-clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 1111F07216105F76005EFBB2 /* 11-clock.png */; };
+		1111F07616105F76005EFBB2 /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 1111F07316105F76005EFBB2 /* 103-map.png */; };
+		1111F07A161062F9005EFBB2 /* PlanMetroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1111F079161062F9005EFBB2 /* PlanMetroViewController.m */; };
+		1111F07D16106314005EFBB2 /* PlanBusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1111F07C16106314005EFBB2 /* PlanBusViewController.m */; };
+		1111F08716107619005EFBB2 /* PlanMetro.png in Resources */ = {isa = PBXBuildFile; fileRef = 1111F08616107619005EFBB2 /* PlanMetro.png */; };
+		11A4BFBD16107E99003339B1 /* PlanBus.gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A4BFBC16107E99003339B1 /* PlanBus.gif */; };
 		11C6B1971608E2F800667970 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C6B1961608E2F800667970 /* UIKit.framework */; };
 		11C6B1991608E2F800667970 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C6B1981608E2F800667970 /* Foundation.framework */; };
 		11C6B19B1608E2F800667970 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C6B19A1608E2F800667970 /* CoreGraphics.framework */; };
@@ -14,10 +21,6 @@
 		11C6B1A31608E2F800667970 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B1A21608E2F800667970 /* main.m */; };
 		11C6B1A71608E2F800667970 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B1A61608E2F800667970 /* AppDelegate.m */; };
 		11C6B1AA1608E2F800667970 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C6B1A81608E2F800667970 /* MainStoryboard.storyboard */; };
-		11C6B1AF1608E2F800667970 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C6B1AE1608E2F800667970 /* first.png */; };
-		11C6B1B11608E2F800667970 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C6B1B01608E2F800667970 /* first@2x.png */; };
-		11C6B1B61608E2F800667970 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C6B1B51608E2F800667970 /* second.png */; };
-		11C6B1B81608E2F800667970 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C6B1B71608E2F800667970 /* second@2x.png */; };
 		11C6B1C21608E3F700667970 /* HorairesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B1C11608E3F700667970 /* HorairesTableViewController.m */; };
 		11C6B1C51608E43C00667970 /* Horaire.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B1C41608E43C00667970 /* Horaire.m */; };
 		11C6B1C91609042700667970 /* RatpTimeStealer.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B1C81609042700667970 /* RatpTimeStealer.m */; };
@@ -26,6 +29,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1111F07116105F76005EFBB2 /* 19-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear.png"; sourceTree = "<group>"; };
+		1111F07216105F76005EFBB2 /* 11-clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-clock.png"; sourceTree = "<group>"; };
+		1111F07316105F76005EFBB2 /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map.png"; sourceTree = "<group>"; };
+		1111F078161062F9005EFBB2 /* PlanMetroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanMetroViewController.h; sourceTree = "<group>"; };
+		1111F079161062F9005EFBB2 /* PlanMetroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanMetroViewController.m; sourceTree = "<group>"; };
+		1111F07B16106314005EFBB2 /* PlanBusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanBusViewController.h; sourceTree = "<group>"; };
+		1111F07C16106314005EFBB2 /* PlanBusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanBusViewController.m; sourceTree = "<group>"; };
+		1111F08616107619005EFBB2 /* PlanMetro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlanMetro.png; sourceTree = "<group>"; };
+		11A4BFBC16107E99003339B1 /* PlanBus.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PlanBus.gif; sourceTree = "<group>"; };
 		11C6B1921608E2F800667970 /* MetroTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C6B1961608E2F800667970 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		11C6B1981608E2F800667970 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,10 +49,6 @@
 		11C6B1A51608E2F800667970 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		11C6B1A61608E2F800667970 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		11C6B1A91608E2F800667970 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		11C6B1AE1608E2F800667970 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		11C6B1B01608E2F800667970 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		11C6B1B51608E2F800667970 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		11C6B1B71608E2F800667970 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		11C6B1C01608E3F700667970 /* HorairesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorairesTableViewController.h; path = ../HorairesTableViewController.h; sourceTree = "<group>"; };
 		11C6B1C11608E3F700667970 /* HorairesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HorairesTableViewController.m; path = ../HorairesTableViewController.m; sourceTree = "<group>"; };
 		11C6B1C31608E43C00667970 /* Horaire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Horaire.h; sourceTree = "<group>"; };
@@ -122,10 +130,11 @@
 		11C6B1BE1608E30F00667970 /* Ressource */ = {
 			isa = PBXGroup;
 			children = (
-				11C6B1AE1608E2F800667970 /* first.png */,
-				11C6B1B01608E2F800667970 /* first@2x.png */,
-				11C6B1B51608E2F800667970 /* second.png */,
-				11C6B1B71608E2F800667970 /* second@2x.png */,
+				1111F08616107619005EFBB2 /* PlanMetro.png */,
+				11A4BFBC16107E99003339B1 /* PlanBus.gif */,
+				1111F07116105F76005EFBB2 /* 19-gear.png */,
+				1111F07216105F76005EFBB2 /* 11-clock.png */,
+				1111F07316105F76005EFBB2 /* 103-map.png */,
 			);
 			name = Ressource;
 			sourceTree = "<group>";
@@ -139,6 +148,10 @@
 				11C6B1D11609B89400667970 /* SettingsTableViewController.m */,
 				11C6B1CD1609AF2200667970 /* SettingsViewController.h */,
 				11C6B1CE1609AF2200667970 /* SettingsViewController.m */,
+				1111F078161062F9005EFBB2 /* PlanMetroViewController.h */,
+				1111F079161062F9005EFBB2 /* PlanMetroViewController.m */,
+				1111F07B16106314005EFBB2 /* PlanBusViewController.h */,
+				1111F07C16106314005EFBB2 /* PlanBusViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -207,10 +220,11 @@
 			files = (
 				11C6B1A11608E2F800667970 /* InfoPlist.strings in Resources */,
 				11C6B1AA1608E2F800667970 /* MainStoryboard.storyboard in Resources */,
-				11C6B1AF1608E2F800667970 /* first.png in Resources */,
-				11C6B1B11608E2F800667970 /* first@2x.png in Resources */,
-				11C6B1B61608E2F800667970 /* second.png in Resources */,
-				11C6B1B81608E2F800667970 /* second@2x.png in Resources */,
+				1111F07416105F76005EFBB2 /* 19-gear.png in Resources */,
+				1111F07516105F76005EFBB2 /* 11-clock.png in Resources */,
+				1111F07616105F76005EFBB2 /* 103-map.png in Resources */,
+				1111F08716107619005EFBB2 /* PlanMetro.png in Resources */,
+				11A4BFBD16107E99003339B1 /* PlanBus.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +242,8 @@
 				11C6B1C91609042700667970 /* RatpTimeStealer.m in Sources */,
 				11C6B1CF1609AF2200667970 /* SettingsViewController.m in Sources */,
 				11C6B1D21609B89400667970 /* SettingsTableViewController.m in Sources */,
+				1111F07A161062F9005EFBB2 /* PlanMetroViewController.m in Sources */,
+				1111F07D16106314005EFBB2 /* PlanBusViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +324,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MetroTime/MetroTime-Prefix.pch";
 				INFOPLIST_FILE = "MetroTime/MetroTime-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -319,6 +336,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MetroTime/MetroTime-Prefix.pch";
 				INFOPLIST_FILE = "MetroTime/MetroTime-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -343,6 +361,7 @@
 				11C6B1BD1608E2F800667970 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
